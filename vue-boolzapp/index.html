@@ -23,12 +23,16 @@
   </head>
   <body>
     <div id="app">
-      <header></header>
+      <header>
+        <h1>Welocome to Boolzapp Web</h1>
+          </label>
+        </div>
+      </header>
 
       <main>
         <div class="whatsapp">
           <div class="row justify-content-center">
-            <div class="col-7 p-1">
+            <div class="col-7 p-0">
               <div class="profile">
                 <div class="me">
                   <img
@@ -53,10 +57,22 @@
                 Ricevi notifiche di nuovi messaggi
                 <p>Attiva notifiche desktop</p>
               </div>
-              <div class="search">search</div>
-              <div class="chatlist">lista chat</div>
+              <div class="search">
+                <label for="exampleDataList" class="form-label"></label>
+                <input
+                  class="form-control" m-0
+                  id="exampleDataList"
+                  placeholder="Cerca o inizia una nuova chat"
+                />
+              </div>
+              <div class="chatlist">
+                <div v-for="element in contacts">
+                  <img :src="element.avatar" alt="img"/>
+                  <h2>{{element.name}}</h2>
+                </div>
+              </div>
             </div>
-            <div class="col-5 p-1">
+            <div class="col-5 p-0">
               <div class="img">
                 messaggi
                 <div class="currentchat">chat attiva</div>

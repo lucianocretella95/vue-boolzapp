@@ -4,7 +4,6 @@ createApp({
   data() {
     return {
       // usare THIS !!!!!!!
-      message: "Whatsapp",
       contacts: [
         {
           name: "Michele",

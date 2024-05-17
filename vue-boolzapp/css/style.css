@@ -16,6 +16,10 @@ header {
   height: 15vh;
 }
 
+h1 {
+  text-align: center;
+}
+
 main {
   background-color: #d8dbd6;
   width: 100%;
@@ -24,8 +28,9 @@ main {
 
 .whatsapp {
   width: 95vh;
-  height: 80vh;
   margin: 0 auto;
+  position: relative;
+  bottom: 1.5rem;
 }
 
 .img {
@@ -39,6 +44,11 @@ main {
   background-color: #ffffff;
   color: black;
   overflow: auto;
+  height: 80vh;
+}
+
+.col-5 {
+  height: 80vh;
 }
 
 .profile {
