@@ -171,7 +171,9 @@ createApp({
     };
   },
 
-  methods: {},
+  methods: {
+    
+  },
   mounted() {
     console.log("app caricata");
   },

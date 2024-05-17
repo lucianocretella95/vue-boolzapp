@@ -9,3 +9,47 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+header {
+  background-color: #009688;
+  width: 100%;
+  height: 15vh;
+}
+
+main {
+  background-color: #d8dbd6;
+  width: 100%;
+  height: 85vh;
+}
+
+.whatsapp {
+  width: 95vh;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.img {
+  height: 80vh;
+  width: 80vh;
+  background-image: url(../img/mine.jpg);
+  color: black;
+}
+
+.col-7 {
+  background-color: #ffffff;
+  color: black;
+  overflow: auto;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  color: #b1b1b1;
+}
+
+.advice {
+  background-color: #8edafc;
+}
