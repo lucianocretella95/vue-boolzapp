@@ -171,7 +171,11 @@ createApp({
   },
 
   methods: {
-    
+    genmess() {
+      console.log("funziona");
+
+      // generare funzione che al click apre la chat corrispondente al contatto cliccato
+    },
   },
   mounted() {
     console.log("app caricata");
