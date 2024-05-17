@@ -25,8 +25,6 @@
     <div id="app">
       <header>
         <h1>Welocome to Boolzapp Web</h1>
-          </label>
-        </div>
       </header>
 
       <main>
@@ -60,16 +58,20 @@
               <div class="search">
                 <label for="exampleDataList" class="form-label"></label>
                 <input
-                  class="form-control" m-0
+                  class="form-control"
+                  m-0
                   id="exampleDataList"
                   placeholder="Cerca o inizia una nuova chat"
                 />
               </div>
               <div class="chatlist">
-                <div v-for="element in contacts">
-                  <img :src="element.avatar" alt="img"/>
-                  <h2>{{element.name}}</h2>
+                <div v-for="element, i in contacts">
+                  <img :src="element.avatar" alt="img" />
+                  <p>{{element.name}}</p>
                 </div>
+                <!-- <div v-for="item, i in contacts.messages">
+                  <p>{{item.contacts.date}}</p>
+                </div> -->
               </div>
             </div>
             <div class="col-5 p-0">
