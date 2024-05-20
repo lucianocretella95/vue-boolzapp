@@ -168,7 +168,7 @@ createApp({
         },
       ],
       chatselected: 0,
-      utenteselected: 0,
+      // utenteselected: 0,
     };
   },
 

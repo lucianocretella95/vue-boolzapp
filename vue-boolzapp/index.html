@@ -77,11 +77,12 @@
             <div class="col-8 p-0">
               <div class="img">
                 <div class="utente">
-                  user
-                  <span v-for="element,i in contacts">
-                    <img style="width: 3rem" :src="element.avatar" />
-                    <p>{{element.name}}</p>
-                  </span>
+                  <img
+                    style="width: 3rem"
+                    :src="contacts[chatselected].avatar"
+                    alt=""
+                  />
+                  <span> {{contacts[chatselected].name}} </span>
                 </div>
                 <div class="currentchat">
                   <span
