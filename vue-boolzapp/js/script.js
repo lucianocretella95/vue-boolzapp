@@ -168,7 +168,8 @@ createApp({
         },
       ],
       chatselected: 0,
-      // utenteselected: 0,
+      usermex: [],
+      botanswer: "https://flynn.boolean.careers/exercises/api/random/sentence",
     };
   },
 
@@ -178,10 +179,6 @@ createApp({
       this.chatselected = i;
       // generare funzione che al click apre la chat corrispondente al contatto cliccato
     },
-
-    // utente(i) {
-    //   this.utenteselected = i;
-    // },
   },
   mounted() {
     console.log("app caricata");

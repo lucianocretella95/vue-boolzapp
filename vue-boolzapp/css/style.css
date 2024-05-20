@@ -92,6 +92,9 @@ main {
   color: black;
   width: 50%;
   border-radius: 10px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-size: 15px;
 }
 
 .received {
@@ -100,4 +103,7 @@ main {
   border-radius: 10px;
   width: 50%;
   border-radius: 15px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-size: 15px;
 }
