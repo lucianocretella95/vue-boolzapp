@@ -31,25 +31,26 @@ main {
   margin: 0 auto;
   position: relative;
   bottom: 1.5rem;
+  right: 3rem;
 }
 
 .img {
-  height: 80vh;
+  height: 100%;
   width: 80vh;
   background-image: url(../img/mine.jpg);
   color: black;
 }
 
-.col-7 {
+.col-4 {
   background-color: #ffffff;
   color: black;
   overflow: auto;
   height: 80vh;
 }
 
-.col-5 {
+.col-8 {
   height: 80vh;
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 .profile {
@@ -74,13 +75,29 @@ main {
   background-color: #f3eeea;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  width: 80vh;
+  width: 70%;
   padding: 0.5rem;
+  position: absolute;
+  bottom: 0px;
 }
 
 .currentchat {
   display: flex;
   flex-direction: column;
+  overflow: auto;
+}
+
+.sent {
+  background-color: #d5f9ba;
+  color: black;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.received {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  width: 50%;
+  border-radius: 15px;
 }

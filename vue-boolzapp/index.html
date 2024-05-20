@@ -30,7 +30,8 @@
       <main>
         <div class="whatsapp">
           <div class="row justify-content-center">
-            <div class="col-7 p-0">
+            <!-- Colonna dei contatti -->
+            <div class="col-4 p-0">
               <div class="profile">
                 <div class="me">
                   <img
@@ -50,15 +51,15 @@
                   <i class="fa-solid fa-list"></i>
                 </div>
               </div>
-              <div class="advice">
+              <div class="advice" style="font-size: 10px">
                 <i class="fa-solid fa-bell-slash" style="color: black"></i>
                 Ricevi notifiche di nuovi messaggi
                 <p>Attiva notifiche desktop</p>
               </div>
               <div class="search">
-                <label for="exampleDataList" class="form-label"></label>
                 <input
                   class="form-control"
+                  style="font-size: 11px"
                   m-0
                   id="exampleDataList"
                   placeholder="Cerca o inizia una nuova chat"
@@ -66,28 +67,30 @@
               </div>
               <div class="chatlist">
                 <div v-for="element, i in contacts">
-                  <img @click="genmess" :src="element.avatar" alt="img" />
+                  <img @click="genmess(i)" :src="element.avatar" alt="img" />
                   <p>{{element.name}}</p>
                 </div>
-                <!-- <div v-for="item, i in contacts.messages">
-                  <p>{{item.contacts.date}}</p>
-                </div> -->
               </div>
             </div>
-            <div class="col-5 p-0">
+
+            <!-- Colonna delle chat -->
+            <div class="col-8 p-0">
               <div class="img">
-                utente selezionato
+                <div class="utente">
+                  user
+                  <span v-for="element,i in contacts">
+                    <img style="width: 3rem" :src="element.avatar" />
+                    <p>{{element.name}}</p>
+                  </span>
+                </div>
                 <div class="currentchat">
                   <span
-                    class="badge"
-                    style="background-color: #d5f9ba; color: black"
-                    >messaggio inviato</span
+                    :class="messaggio.status"
+                    v-for="messaggio in contacts[chatselected].messages"
                   >
-                  <span
-                    class="badge"
-                    style="background-color: #ffffff; color: black"
-                    >messaggio ricevuto</span
-                  >
+                    <p>{{messaggio.message}}</p>
+                    <p>{{messaggio.date}}</p>
+                  </span>
                 </div>
                 <div class="mexbox">
                   <p>
@@ -100,9 +103,16 @@
                     <input
                       type="text"
                       class="form-control"
+                      style="margin-left: 0.3rem; margin-right: 0.3rem"
                       placeholder="Scrivi un messaggio"
                     />
                   </div>
+                  <p>
+                    <i
+                      class="fa-solid fa-envelope-circle-check"
+                      style="color: #6b7376"
+                    ></i>
+                  </p>
                   <p>
                     <i
                       class="fa-solid fa-microphone"

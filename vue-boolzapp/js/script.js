@@ -167,15 +167,21 @@ createApp({
           ],
         },
       ],
+      chatselected: 0,
+      utenteselected: 0,
     };
   },
 
   methods: {
-    genmess() {
-      console.log("funziona");
-
+    genmess(i) {
+      // console.log("funziona");
+      this.chatselected = i;
       // generare funzione che al click apre la chat corrispondente al contatto cliccato
     },
+
+    // utente(i) {
+    //   this.utenteselected = i;
+    // },
   },
   mounted() {
     console.log("app caricata");
